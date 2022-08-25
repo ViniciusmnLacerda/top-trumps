@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 class Delete extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class Delete extends React.Component {
           data-testid="delete-button"
           onClick={ deleteCard }
         >
-          <span className="span-form-delete-text">Excluir</span>
+          Delete
         </button>
       </div>
     );

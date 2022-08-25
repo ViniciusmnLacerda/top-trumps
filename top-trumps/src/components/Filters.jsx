@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 class Filters extends React.Component {
   render() {
@@ -7,7 +7,7 @@ class Filters extends React.Component {
       filterTrunfo, filterRarity, filterName, filterDisabled } = this.props;
     return (
       <div className="filters-container">
-        <h1 className="filters-title">Filtros de busca</h1>
+        <h1 className="filters-title">Search Filters</h1>
         <div className="filter-by-name">
           <label htmlFor="filterName">
             <input
@@ -16,7 +16,7 @@ class Filters extends React.Component {
               id="filterName"
               type="text"
               data-testid="name-filter"
-              placeholder="Nome da carta"
+              placeholder="Card's name"
               onChange={ filterByName }
               value={ filterName }
               disabled={ filterDisabled }
@@ -37,10 +37,10 @@ class Filters extends React.Component {
               value={ filterRarity }
               disabled={ filterDisabled }
             >
-              <option value="todas">todas</option>
+              <option value="todas">all</option>
               <option value="normal">Normal</option>
-              <option value="raro">Raro</option>
-              <option value="muito raro">Muito raro</option>
+              <option value="raro">Rare</option>
+              <option value="muito raro">Very rare</option>
             </select>
           </label>
         </div>

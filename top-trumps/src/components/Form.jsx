@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 class Form extends React.Component {
   render() {
@@ -9,28 +9,27 @@ class Form extends React.Component {
     return (
       <div className="new-card-container">
         <div className="new-card">
-          <h1>Adicionar nova carta</h1>
+          <h1>Add New Card</h1>
         </div>
         <form className="form">
 
-          <div className="container">
+          <div className="container txt">
             <label htmlFor="cardNname">
-              <span className="form-span">Nome</span>
+              <span className="form-span">Name</span>
               <input
                 data-testid="name-input"
                 type="text"
                 name="cardName"
                 id="cardName"
-                placeholder="Nome da carta"
                 value={ cardName }
                 onChange={ onInputChange }
               />
             </label>
           </div>
 
-          <div className="container">
+          <div className="container txt">
             <label htmlFor="cardDescription">
-            <span className="form-span">Descrição</span>
+            <span className="form-span">Description</span>
               <textarea
                 name="cardDescription"
                 id="cardDescription"
@@ -43,7 +42,7 @@ class Form extends React.Component {
             </label>
           </div>
 
-          <div className="container">
+          <div className="container attr">
             <label className="label-attr" htmlFor="cardAttr1">
               <span className="form-span-attr">Damage</span>
               <input
@@ -58,7 +57,7 @@ class Form extends React.Component {
             </label>
           </div>
 
-          <div className="container">
+          <div className="container attr">
             <label className="label-attr" htmlFor="cardAttr2">
               <span className="form-span-attr">Life</span>
               <input
@@ -73,7 +72,7 @@ class Form extends React.Component {
             </label>
           </div>
 
-          <div className="container">
+          <div className="container attr">
             <label className="label-attr" htmlFor="cardAttr3">
               <span className="form-span-attr">Armor</span>
               <input
@@ -88,10 +87,11 @@ class Form extends React.Component {
             </label>
           </div>
 
-          <div className="container">
+          <div className="container img">
             <label className="label-image" htmlFor="cardImage">
               <span className="form-span-image">Image</span>
               <input
+                placeholder="Insert the link"
                 data-testid="image-input"
                 type="text"
                 name="cardImage"
@@ -102,8 +102,8 @@ class Form extends React.Component {
             </label>
           </div>
 
-          <label htmlFor="cardRare">
-          <span className="label-card-rare">Raridade</span>
+          <label className="rare-container" htmlFor="cardRare">
+          <span className="label-card-rare">Rarity</span>
             <select
               name="cardRare"
               id="cardRare"
@@ -113,12 +113,12 @@ class Form extends React.Component {
               onChange={ onInputChange }
             >
               <option value="normal">Normal</option>
-              <option value="raro">Raro</option>
-              <option value="muito raro">Muito raro</option>
+              <option value="raro">Rare</option>
+              <option value="muito raro">Very rare</option>
             </select>
           </label>
 
-          <div className="container">
+          <div className="container super-trump">
             {!hasTrunfo ? (
               <label className="label-trunfo" htmlFor="cardTrunfo">
                 <input
@@ -129,14 +129,14 @@ class Form extends React.Component {
                   checked={ cardTrunfo }
                   onChange={ onInputChange }
                 />
-                <span className="form-span-checkbox">Super Tryber Trunfo</span>
+                <span className="form-span-checkbox">Super Trump</span>
               </label>
             ) : (
               <p>Você já tem um Super Trunfo em seu baralho</p>
             )}
           </div>
 
-          <div className="container">
+          <div className="container btn">
             <button
               type="submit"
               data-testid="save-button"
@@ -144,7 +144,7 @@ class Form extends React.Component {
               disabled={ isSaveButtonDisabled }
               onClick={ onSaveButtonClick }
             >
-              Salvar
+              Save
             </button>
           </div>
         </form>

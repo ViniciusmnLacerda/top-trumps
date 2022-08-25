@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 class Card extends React.Component {
   render() {
@@ -23,7 +23,7 @@ class Card extends React.Component {
                 data-testid="image-card"
               />
 
-                {cardTrunfo && <img src="https://images2.imgbox.com/06/10/Klsm9ec9_o.png" className="image-super-trunfo"  id="super-trunfo" data-testid="trunfo-card"/>}
+                {cardTrunfo && <img alt="top-trump"src="https://images2.imgbox.com/06/10/Klsm9ec9_o.png" className="image-super-trunfo"  id="super-trunfo" data-testid="trunfo-card"/>}
               </div>
 
             <p

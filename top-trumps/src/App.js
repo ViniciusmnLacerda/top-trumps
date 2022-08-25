@@ -195,7 +195,7 @@ class App extends React.Component {
           />
           <div className="card-preview-container">
             <div className="new-card-title">
-              <h1>Pré Visualização</h1>
+              <h1></h1>
             </div>  
             <Card
               cardName={ cardName }
@@ -210,7 +210,7 @@ class App extends React.Component {
           </div>
         </div>
         <div className="cards-view-container">
-          <h1 className="cards-view-title">Todas as cartas</h1>
+          <h1 className="cards-view-title">All Cards</h1>
           <Filters
             filterByName={ this.filterByName }
             filterByRarity={ this.filterByRarity }
