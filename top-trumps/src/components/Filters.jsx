@@ -56,7 +56,7 @@ class Filters extends React.Component {
               onChange={ filterByTrunfo }
               checked={ filterTrunfo }
             />
-            <span className="form-span-checkbox">Super Trunfo</span>
+            <span className="form-span-checkbox">Super Trump</span>
           </label>
         </div>
       </div>
